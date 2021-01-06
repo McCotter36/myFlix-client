@@ -12,6 +12,8 @@ export class MainView extends React.Component {
     this.state = {
       user: null
     };
+
+    this.resetMovie = this.resetMovie.bind(this);
   }
 
   componentDidMount() {
@@ -24,6 +26,12 @@ export class MainView extends React.Component {
       .catch(function (error) {
         console.log(error);
       });
+  }
+
+  resetMovie() {
+    this.setState({
+      selectedmovie: null
+    });
   }
 
   onMovieClick(movie) {
