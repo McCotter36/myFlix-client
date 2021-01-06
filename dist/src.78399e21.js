@@ -33528,6 +33528,13 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(MovieView, [{
+    key: "resetMovie",
+    value: function resetMovie() {
+      this.setState({
+        selectedmovie: null
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var movie = this.props.movie;
@@ -33565,7 +33572,9 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
         className: "button"
       }, _react.default.createElement("button", {
         className: "return-button",
-        onClick: onClick()
+        onClick: function onClick() {
+          return resetMovie();
+        }
       }, " Return")));
     }
   }]);
