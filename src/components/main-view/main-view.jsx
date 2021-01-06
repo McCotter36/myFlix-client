@@ -1,8 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+import './main-view.scss'
 
+import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
+import { RegistrationView } from '../registration-view/registration-view';
 
 export class MainView extends React.Component {
 
@@ -10,7 +13,9 @@ export class MainView extends React.Component {
     super();
 
     this.state = {
-      user: null
+      user: null,
+      movies: null,
+      selectedMovie: null
     };
 
     this.resetMovie = this.resetMovie.bind(this);
@@ -40,8 +45,23 @@ export class MainView extends React.Component {
     });
   }
 
+  // Jackson Code
+  resetMovie() {
+    this.setState({
+      selectedMovie: null
+    });
+  }
+
+  onLoggedIn(user) {
+    this.setState({
+      user
+    });
+  }
+
   render() {
-    const { movies, selectedMovie } = this.state;
+    const { movies, selectedMovie, user } = this.state;
+
+    if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
 
     if (!movies) return <div className="main-view" />;
 
