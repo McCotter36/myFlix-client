@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-
+import './registration-view.scss';
 
 export function RegistrationView(props) {
   const { username, setUsername } = useState('');
@@ -12,8 +12,20 @@ export function RegistrationView(props) {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log(username, password, email, birthday);
-    props.onLoggedIn(username);
+    axios.post('https://mccotter-movie-api.herokuapp.com/users', {
+      Username: username,
+      Password: password,
+      Email: email,
+      Birthday: birthday
+    })
+      .then(response => {
+        const data = response.data;
+        console.log(data);
+        window.open('/', '_self'); //self necessary so page will open in current tab
+      })
+      .catch(e => {
+        console.log('error registering the user')
+      });
   };
 
   return (
