@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import FormGroup from 'react-bootstrap/FormGroup';
 import { RegistrationView } from '../registration-view/registration-view';
-
+import './login-view.scss';
 
 export function LoginView(props) {
   const [username, setUsername] = useState('');
@@ -12,23 +16,33 @@ export function LoginView(props) {
     props.onLoggedIn(username);
   };
 
-  const register = () => {
-    console.log(register);
-    return (<RegistrationView />)
-  }
-
   return (
-    <form>
-      <label>
-        Username:
-        <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-      </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-      </label>
-      <button type="button" onClick={handleSubmit}>Submit</button>
-      <button type="button" onClick={register}>Register</button>
-    </form>
+    <Form className="login-form">
+      <Form.Group>
+        <Form.Label>Please Log In</Form.Label>
+      </Form.Group>
+      <Form.Group controlId="formBasicUsername">
+        <Form.Label>Username</Form.Label>
+        <Form.Control type="text" value={username} onChange={e => setUsername(e.target.value)} />
+        <Form.Text className="text-muted">Make it a good one.</Form.Text>
+      </Form.Group>
+      <Form.Group controlId="formBasicPassword">
+        <Form.Label>Password
+           <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)} />
+        </Form.Label>
+      </Form.Group>
+      <Button className="button" variant="primary" type="submit" onClick={handleSubmit}>
+        Submit
+        </Button>
+      <Button className="button-link" variant="link" type="register">
+        Register
+        </Button>
+    </Form>
   )
+}
+
+LoginView.propTypes = {
+  setUserName: PropTypes.func,
+  setPassword: PropTypes.func,
+  handleSubmit: PropTypes.func
 }

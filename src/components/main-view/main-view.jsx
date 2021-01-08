@@ -1,5 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
+import { Row, Col, Alert, Container } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+
 import './main-view.scss'
 
 import { LoginView } from '../login-view/login-view';
@@ -15,7 +20,8 @@ export class MainView extends React.Component {
     this.state = {
       user: null,
       movies: null,
-      selectedMovie: null
+      selectedMovie: null,
+      newUser: null
     };
 
     this.resetMovie = this.resetMovie.bind(this);
@@ -33,22 +39,20 @@ export class MainView extends React.Component {
       });
   }
 
-  resetMovie() {
-    this.setState({
-      selectedmovie: null
-    });
-  }
-
   onMovieClick(movie) {
     this.setState({
       selectedMovie: movie
     });
   }
 
-  // Jackson Code
   resetMovie() {
     this.setState({
       selectedMovie: null
+    });
+  }
+  resetUser() {
+    this.setState({
+      user: null
     });
   }
 
@@ -58,8 +62,9 @@ export class MainView extends React.Component {
     });
   }
 
+
   render() {
-    const { movies, selectedMovie, user } = this.state;
+    const { movies, user } = this.state;
 
     if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
 
@@ -67,14 +72,36 @@ export class MainView extends React.Component {
 
 
     return (
-      <div className="main-view">
-        { selectedMovie
-          ? <MovieView movie={selectedMovie} />
-          : movies.map(movie => (
-            <MovieCard key={movie._id} movie={movie} onClick={movie => this.onMovieClick(movie)} />
-          ))
-        }
-      </div>
+      <Container>
+        <Navbar className="nav-bar">
+          <Navbar.Brand variant="dark" className="brand-title" onClick={() => this.resetMovie()}>myFlix</Navbar.Brand>
+          <Nav variant="dark">
+            <Nav.Link className="nav-link" variant="dark" onClick={() => this.resetUser()}>Logout</Nav.Link>
+          </Nav>
+        </Navbar >
+        <Row className="main-view justify-content-md-center">
+          {this.state.selectedMovie
+            ? (
+              <Col md={8}>
+                <MovieView movie={this.state.selectedMovie} onClick={() => this.resetMovie()} />
+              </Col>
+            )
+            :
+            movies.map(movie => (
+              <Col md={3}>
+                <MovieCard key={movie._id} movie={movie} onClick={movie => this.onMovieClick(movie)} />
+              </Col>
+            ))
+          }
+        </Row>
+      </Container >
     );
   }
 }
+
+MainView.propTypes = {
+  resetMovie: PropTypes.func,
+  onMovieClick: PropTypes.func,
+  onLoggedIn: PropTypes.func,
+  resetUser: PropTypes.func
+};

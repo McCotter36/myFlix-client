@@ -9,31 +9,23 @@ export class MovieCard extends React.Component {
     const { movie, onClick } = this.props;
 
     return (
-      <Card style={{ width: '16rem' }}>
+      <Card className="movie-card" style={{ width: '16rem' }}>
         <Card.Img variant="top" src={movie.ImagePath} />
         <Card.Body>
-          <Card.Title>{movie.Title}</Card.Title>
-          <Card.Text>{movie.Description}</Card.Text>
-          <Button onClick={() => onClick(movie)} variant="link">Open</Button>
+          <Card.Title className="title">{movie.Title}</Card.Title>
+          <Card.Text className="description">{movie.Description}</Card.Text>
+          <Button className="button" onClick={() => onClick(movie)}>More</Button>
         </Card.Body>
       </Card>
     );
   }
 }
 
-// MovieCard.propTypes = {
-//   movie: PropTypes.shape({
-//     Title: PropTypes.string.isRequired,
-//     Description: PropTypes.string.isRequired,
-//     ImagePath: PropTypes.string.isRequired
-//   }).isRequired,
-//   director: PropTypes.shape({
-//     Name: PropTypes.string.isRequired,
-//     Bio: PropTypes.string.isRequired
-//   }).isRequired,
-//   genre: PropTypes.shape({
-//     Name: PropTypes.string.isRequired,
-//     Description: PropTypes.string.isRequired
-//   }).isRequired,
-//   onClick: PropTypes.func.isRequired
-// };
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    Title: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired,
+    ImagePath: PropTypes.string.isRequired
+  }).isRequired,
+  onClick: PropTypes.func.isRequired
+};

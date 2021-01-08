@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import './movie-view.scss';
 
 export class MovieView extends React.Component {
@@ -8,14 +11,8 @@ export class MovieView extends React.Component {
     this.state = {};
   }
 
-  resetMovie() {
-    this.setState({
-      selectedmovie: null
-    });
-  }
-
   render() {
-    const { movie } = this.props;
+    const { movie, onClick } = this.props;
 
     if (!movie) return null;
 
@@ -40,9 +37,26 @@ export class MovieView extends React.Component {
           <span className="value">{movie.Director.Name}</span>
         </div>
         <div className="button">
-          <button className="return-button" onClick={() => resetMovie()}> Return</button>
+          <Button className="button" onClick={() => onClick()}>Return</Button>
         </div>
       </div>
     );
   }
 }
+
+MovieView.propTypes = {
+  movie: PropTypes.shape({
+    Title: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired,
+    ImagePath: PropTypes.string.isRequired
+  }).isRequired,
+  director: PropTypes.shape({
+    Name: PropTypes.string.isRequired,
+    Bio: PropTypes.string.isRequired
+  }).isRequired,
+  genre: PropTypes.shape({
+    Name: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired
+  }).isRequired,
+  onClick: PropTypes.func.isRequired
+};
