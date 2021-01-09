@@ -40,7 +40,7 @@ export class MainView extends React.Component {
   }
 
   getMovies(token) {
-    axios.get('https://mccotter-movie-api.herokuapp.com/movies', {
+    axios.get(`https://mccotter-movie-api.herokuapp.com/movies`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(response => {
@@ -90,53 +90,55 @@ export class MainView extends React.Component {
 
 
     return (
-      <Container>
+      <Router>
         <Navbar className="nav-bar">
-          <Navbar.Brand variant="dark" className="brand-title" onClick={() => this.resetMovie()}>myFlix</Navbar.Brand>
+          <Navbar.Brand variant="dark" className="brand-title" >
+            <Nav.Link className="home-link" as={Link} to="/">myFlix</Nav.Link>
+          </Navbar.Brand>
           <Nav variant="dark">
-            <Nav.Link className="nav-link" variant="dark" onClick={() => this.onLogOut()}>Logout</Nav.Link>
+            <Nav.Link className="home-link" as={Link} to="/">Home</Nav.Link>
+            <Nav.Link className="profile-link" as={Link} to="/users/:Username">Profile</Nav.Link>
+            <Nav.Link className="nav-link" variant="dark" onClick={this.onLogOut}>Logout</Nav.Link>
           </Nav>
         </Navbar >
 
-        < Router >
-          <div>
+        <Container>
+          {/* Login / Main View */}
+          <Route exact path="/" render={() => {
+            if (!user) return <Row><LoginView onLoggedIn={user => this.onLoggedIn(user)} /></Row>;
+            return movies.map(m => <Row className="justify-content-md-center"><Col md="3"><MovieCard key={m._id} movie={m} /></Col></Row>)
+          }} />
 
-            {/* Login / Main View */}
-            <Route exact path="/" render={() => {
-              if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
-              return movies.map(m => <MovieCard key={m._id} movie={m} />)
-            }
-            } />
+        </Container>
+        <div>
+          {/* Registration View */}
+          <Route path="/register" render={() => <RegistrationView />} />
 
-            {/* Registration View */}
-            <Route path="/register" render={() => <RegistrationView />} />
+          {/* MovieView */}
+          <Route exact path="/movies/:movieId" render={({ match }) => <MovieView movie={movies.find(m => m._id === match.params.movieId)} />} />
 
-            {/* MovieView */}
-            <Route exact path="/movies/:movieId" render={({ match }) => <MovieView movie={movies.find(m => m._id === match.params.movieId)} />} />
+          {/* Genre View */}
+          <Route exact path="/genres/:name" render={({ match }) => {
+            if (!movies) return <div className="main-view" />
+            return <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} />
+          }} />
 
-            {/* Genre View */}
-            <Route exact path="/genres/:name" render={({ match }) => {
-              if (!movies) return <div className="main-view" />;
-              return <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} />
-            }} />
+          {/* Director View */}
+          <Route path="/directors/:name" render={({ match }) => {
+            if (!movies) return <div className="main-view" />
+            return <DirectorView director={movies.find(m => m.Director.Name === match.params.name).Director} />
+          }} />
 
-            {/* Director View */}
-            <Route exact path="/directors/:name" render={({ match }) => {
-              if (!movies) return <div className="main-view" />;
-              return <DirectorView director={movies.find(m => m.Director.Name === match.params.name).Director} />
-            }} />
+          {/* Profile View */}
+          <Route exact path="/users/:Username" render={({ match }) => <ProfileView movies={movies} />} />
 
-            {/* Profile View */}
-            <Route exact path="users/:Username" render={({ match }) => <ProfileView movies={movies} />} />
+          <Route exact path="/users/:Username/update" render={() =>
+            <ProfileUpdate movies={movies} />} />
 
-            <Route exact path="users/:Username/update" render={() =>
-              <ProfileUpdate movies={movies} />} />
+          <Route path="/logout" render={() => <LoginView />} />
+        </div>
 
-            <Route path="/logout" render={() => <LoginView />} />
-          </div>
-
-        </Router >
-      </Container>
+      </Router >
     );
   }
 }

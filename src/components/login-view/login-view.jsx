@@ -3,8 +3,9 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import FormGroup from 'react-bootstrap/FormGroup';
-import { RegistrationView } from '../registration-view/registration-view';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import './login-view.scss';
 
 export function LoginView(props) {
@@ -44,10 +45,10 @@ export function LoginView(props) {
       <Button className="button" variant="primary" type="submit" onClick={handleSubmit}>
         Submit
         </Button>
-      <Button className="button-link" variant="link" type="register">
-        Register
-        </Button>
-    </Form>
+      <Link to={"/register"}>
+        <Button className="button-link" variant="link" >Register</Button>
+      </Link>
+    </Form >
   )
 }
 
