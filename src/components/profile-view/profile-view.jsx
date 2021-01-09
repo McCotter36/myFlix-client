@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Row, Col, Alert, Container } from "react-bootstrap";
-import Form from 'react-bootstrap/Form';
 
 import './profile-view.scss';
 
@@ -90,30 +89,6 @@ export class ProfileView extends React.Component {
           <Card.Body >
             <Card.Text>Username: {this.state.Username}</Card.Text>
             <Card.Text>Email: {this.state.Email}</Card.Text>
-
-            {/*
-  <Form className="registration-form">
-      <Form.Group>
-        <Form.Label>Please Register</Form.Label>
-      </Form.Group>
-      <Form.Group controlId="formBasicUsername">
-        <Form.Label>Username</Form.Label>
-        <Form.Control type="text" value={username} onChange={e => setUsername(e.target.value)} />
-      </Form.Group>
-      <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="text" value={password} onChange={e => setPassword(e.target.value)} />
-      </Form.Group>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="text" value={email} onChange={e => setEmail(e.target.value)} />
-      </Form.Group>
-      <Form.Group controlId="formBasicBrthday">
-        <Form.Label>Birthday</Form.Label>
-        <Form.Control type="text" value={birthday} onChange={e => setBirthday(e.target.value)} />
-      </Form.Group>
-      <Button type="button" className="button" onClick={handleRegister}>Register</Button> */}
-
             <div className="profile-nav">
 
               <Link to={'/'}>
@@ -121,6 +96,9 @@ export class ProfileView extends React.Component {
               </Link>
               <Link to={'/users/:userId/update'} >
                 <Button onClick={() => this.deleteUser()} className="button-link" variant="link"> Delete Profile</Button>
+              </Link>
+              <Link to={'/users/:userId/update'} >
+                <Button className="button-link" variant="link">Update Profile</Button>
               </Link>
             </div>
           </Card.Body>

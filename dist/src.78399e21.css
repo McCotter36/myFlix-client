@@ -156,6 +156,24 @@
   color: #3d003d;
   text-align: center;
 }
+.profile-update-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+  font-family: "Goldman", cursive;
+}
+
+.button {
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-color: white;
+}
+
+.button-link {
+  font-family: "Goldman", cursive;
+  color: #3d003d;
+}
 .my-flix {
   color: purple;
 }

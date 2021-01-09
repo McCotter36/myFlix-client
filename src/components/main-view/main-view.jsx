@@ -16,7 +16,7 @@ import { RegistrationView } from '../registration-view/registration-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
-
+import { ProfileUpdateView } from '../profile-update-view/profile-update-view';
 
 export class MainView extends React.Component {
 
@@ -133,7 +133,7 @@ export class MainView extends React.Component {
           <Route exact path="/users/:Username" render={({ match }) => <ProfileView movies={movies} />} />
 
           <Route exact path="/users/:Username/update" render={() =>
-            <ProfileUpdate movies={movies} />} />
+            <ProfileUpdateView movies={movies} />} />
 
           <Route path="/logout" render={() => <LoginView />} />
         </div>
