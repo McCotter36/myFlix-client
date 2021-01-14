@@ -1,0 +1,189 @@
+.brand-title {
+  width: 100%;
+  font-family: "Goldman", cursive;
+  font-size: 28px;
+  color: White !important;
+}
+
+.navbar {
+  background-color: #3d003d;
+}
+
+.nav-link {
+  color: white !important;
+}
+.visibility-input {
+  text-align: center;
+  font-family: "Goldman";
+}
+.title {
+  font-family: "Goldman", cursive;
+  font-size: 24px;
+  text-align: center;
+}
+
+.description {
+  font-family: "Roboto";
+}
+
+.button {
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-color: white;
+}
+.login-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  text-align: center;
+  font-family: "Goldman", cursive;
+}
+
+.button {
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-color: white;
+}
+
+.button-link {
+  font-family: "Goldman", cursive;
+  color: #3d003d;
+  text-align: center;
+}
+.movie-view {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  font-family: "Goldman", cursive;
+}
+
+.movie-poster {
+  width: 300px;
+}
+
+.button {
+  width: 100%;
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-width: 0px;
+}
+
+.button-link {
+  font-family: "Goldman", cursive;
+  color: #3d003d;
+  text-align: center;
+}
+.registration-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+  font-family: "Goldman", cursive;
+}
+
+.button {
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-color: white;
+}
+
+.button-link {
+  font-family: "Goldman", cursive;
+  color: #3d003d;
+}
+.director-view {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.director-name {
+  font-weight: bold;
+  font-family: "Goldman", cursive;
+}
+
+.director-life {
+  font-family: "Goldman", cursive;
+}
+
+.director-bio {
+  font-family: "roboto";
+}
+
+.button {
+  width: 100%;
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-width: 0px;
+}
+.genre-view {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.genre-name {
+  font-weight: bold;
+  font-family: "Goldman", cursive;
+}
+
+.genre-description {
+  font-family: "roboto";
+}
+
+.button {
+  width: 100%;
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-width: 0px;
+}
+.profile-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+  font-family: "Goldman", cursive;
+}
+
+.button {
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-color: white;
+}
+
+.button-link {
+  font-family: "Goldman", cursive;
+  color: #3d003d;
+  text-align: center;
+}
+.profile-update-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+  font-family: "Goldman", cursive;
+}
+
+.button {
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-color: white;
+}
+
+.button-link {
+  font-family: "Goldman", cursive;
+  color: #3d003d;
+}
+.my-flix {
+  color: purple;
+}
+
+.main-title {
+  font-family: "Goldman", cursive;
+}
+
+/*# sourceMappingURL=/src.78399e21.css.map */
