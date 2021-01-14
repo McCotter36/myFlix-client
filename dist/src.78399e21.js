@@ -30459,7 +30459,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ThemeContext = _react.default.createContext({});
+var ThemeContext = /*#__PURE__*/_react.default.createContext({});
 
 var Consumer = ThemeContext.Consumer,
     Provider = ThemeContext.Provider;
@@ -30492,7 +30492,7 @@ function createBootstrapComponent(Component, opts) {
       _opts$forwardRefAs = _opts.forwardRefAs,
       forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
 
-  var Wrapped = _react.default.forwardRef(function (_ref2, ref) {
+  var Wrapped = /*#__PURE__*/_react.default.forwardRef(function (_ref2, ref) {
     var props = (0, _extends2.default)({}, _ref2);
     props[forwardRefAs] = ref;
     var bsPrefix = useBootstrapPrefix(props.bsPrefix, prefix);
@@ -30520,7 +30520,7 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // TODO (apparently this is a bare "onSelect"?)
-var SelectableContext = _react.default.createContext(null);
+var SelectableContext = /*#__PURE__*/_react.default.createContext(null);
 
 var makeEventKey = function makeEventKey(eventKey, href) {
   if (href === void 0) {
@@ -30546,7 +30546,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var context = _react.default.createContext(null);
+var context = /*#__PURE__*/_react.default.createContext(null);
 
 context.displayName = 'AccordionContext';
 var _default = context;
@@ -30590,7 +30590,7 @@ function useAccordionToggle(eventKey, onClick) {
   };
 }
 
-var AccordionToggle = _react.default.forwardRef(function (_ref, ref) {
+var AccordionToggle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'button' : _ref$as,
       children = _ref.children,
@@ -32700,7 +32700,7 @@ var defaultProps = {
   getDimensionValue: getDefaultDimensionValue
 };
 
-var Collapse = _react.default.forwardRef(function (_ref, ref) {
+var Collapse = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var onEnter = _ref.onEnter,
       onEntering = _ref.onEntering,
       onEntered = _ref.onEntered,
@@ -32759,7 +32759,7 @@ var Collapse = _react.default.forwardRef(function (_ref, ref) {
     onExit: handleExit,
     onExiting: handleExiting
   }), function (state, innerProps) {
-    return _react.default.cloneElement(children, (0, _extends2.default)({}, innerProps, {
+    return /*#__PURE__*/_react.default.cloneElement(children, (0, _extends2.default)({}, innerProps, {
       className: (0, _classnames.default)(className, children.props.className, collapseStyles[state], computedDimension === 'width' && 'width')
     }));
   });
@@ -32796,7 +32796,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AccordionCollapse = _react.default.forwardRef(function (_ref, ref) {
+var AccordionCollapse = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var children = _ref.children,
       eventKey = _ref.eventKey,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["children", "eventKey"]);
@@ -32844,7 +32844,7 @@ var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Accordion = _react.default.forwardRef(function (props, ref) {
+var Accordion = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(props, {
     activeKey: 'onSelect'
   }),
@@ -32962,7 +32962,7 @@ var defaultProps = {
 };
 var fadeStyles = (_fadeStyles = {}, _fadeStyles[_Transition.ENTERING] = 'show', _fadeStyles[_Transition.ENTERED] = 'show', _fadeStyles);
 
-var Fade = _react.default.forwardRef(function (_ref, ref) {
+var Fade = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var className = _ref.className,
       children = _ref.children,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["className", "children"]);
@@ -32976,7 +32976,7 @@ var Fade = _react.default.forwardRef(function (_ref, ref) {
   }, props, {
     onEnter: handleEnter
   }), function (status, innerProps) {
-    return _react.default.cloneElement(children, (0, _extends2.default)({}, innerProps, {
+    return /*#__PURE__*/_react.default.cloneElement(children, (0, _extends2.default)({}, innerProps, {
       className: (0, _classnames.default)('fade', className, children.props.className, fadeStyles[status])
     }));
   });
@@ -33014,7 +33014,7 @@ var defaultProps = {
   label: 'Close'
 };
 
-var CloseButton = _react.default.forwardRef(function (_ref, ref) {
+var CloseButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var label = _ref.label,
       onClick = _ref.onClick,
       className = _ref.className,
@@ -33053,7 +33053,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = function _default(className) {
-  return _react.default.forwardRef(function (p, ref) {
+  return /*#__PURE__*/_react.default.forwardRef(function (p, ref) {
     return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, p, {
       ref: ref,
       className: (0, _classnames.default)(p.className, className)
@@ -33110,7 +33110,7 @@ function createWithBsPrefix(prefix, _temp) {
       Component = _ref.Component,
       defaultProps = _ref.defaultProps;
 
-  var BsComponent = _react.default.forwardRef(function (_ref2, ref) {
+  var BsComponent = /*#__PURE__*/_react.default.forwardRef(function (_ref2, ref) {
     var className = _ref2.className,
         bsPrefix = _ref2.bsPrefix,
         _ref2$as = _ref2.as,
@@ -33157,7 +33157,7 @@ function isTrivialHref(href) {
  */
 
 
-var SafeAnchor = _react.default.forwardRef(function (_ref, ref) {
+var SafeAnchor = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'a' : _ref$as,
       disabled = _ref.disabled,
@@ -33260,7 +33260,7 @@ var defaultProps = {
   closeLabel: 'Close alert'
 };
 
-var Alert = _react.default.forwardRef(function (uncontrolledProps, ref) {
+var Alert = /*#__PURE__*/_react.default.forwardRef(function (uncontrolledProps, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(uncontrolledProps, {
     show: 'onClose'
   }),
@@ -33285,7 +33285,7 @@ var Alert = _react.default.forwardRef(function (uncontrolledProps, ref) {
 
   var alert = /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     role: "alert"
-  }, Transition ? props : undefined, {
+  }, !Transition ? props : undefined, {
     ref: ref,
     className: (0, _classnames.default)(className, prefix, variant && prefix + "-" + variant, dismissible && prefix + "-dismissible")
   }), dismissible && /*#__PURE__*/_react.default.createElement(_CloseButton.default, {
@@ -33332,7 +33332,7 @@ var defaultProps = {
   pill: false
 };
 
-var Badge = _react.default.forwardRef(function (_ref, ref) {
+var Badge = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       variant = _ref.variant,
       pill = _ref.pill,
@@ -33379,7 +33379,7 @@ var defaultProps = {
   linkProps: {}
 };
 
-var BreadcrumbItem = _react.default.forwardRef(function (_ref, ref) {
+var BreadcrumbItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       active = _ref.active,
       children = _ref.children,
@@ -33439,7 +33439,7 @@ var defaultProps = {
   listProps: {}
 };
 
-var Breadcrumb = _react.default.forwardRef(function (_ref, ref) {
+var Breadcrumb = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       listProps = _ref.listProps,
@@ -33491,7 +33491,7 @@ var defaultProps = {
   disabled: false
 };
 
-var Button = _react.default.forwardRef(function (_ref, ref) {
+var Button = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       variant = _ref.variant,
       size = _ref.size,
@@ -33558,7 +33558,7 @@ var defaultProps = {
   role: 'group'
 };
 
-var ButtonGroup = _react.default.forwardRef(function (_ref, ref) {
+var ButtonGroup = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       size = _ref.size,
       toggle = _ref.toggle,
@@ -33604,7 +33604,7 @@ var defaultProps = {
   role: 'toolbar'
 };
 
-var ButtonToolbar = _react.default.forwardRef(function (_ref, ref) {
+var ButtonToolbar = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className"]);
@@ -33631,7 +33631,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var context = _react.default.createContext(null);
+var context = /*#__PURE__*/_react.default.createContext(null);
 
 context.displayName = 'CardContext';
 var _default = context;
@@ -33660,7 +33660,7 @@ var defaultProps = {
   variant: null
 };
 
-var CardImg = _react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+var CardImg = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
 function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
@@ -33733,7 +33733,7 @@ var defaultProps = {
   body: false
 };
 
-var Card = _react.default.forwardRef(function (_ref, ref) {
+var Card = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       bg = _ref.bg,
@@ -34076,7 +34076,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CarouselItem = _react.default.forwardRef(function (_ref, ref) {
+var CarouselItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       bsPrefix = _ref.bsPrefix,
@@ -34118,7 +34118,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function map(children, func) {
   var index = 0;
   return _react.default.Children.map(children, function (child) {
-    return _react.default.isValidElement(child) ? func(child, index++) : child;
+    return /*#__PURE__*/_react.default.isValidElement(child) ? func(child, index++) : child;
   });
 }
 /**
@@ -34133,7 +34133,7 @@ function forEach(children, func) {
   var index = 0;
 
   _react.default.Children.forEach(children, function (child) {
-    if (_react.default.isValidElement(child)) func(child, index++);
+    if ( /*#__PURE__*/_react.default.isValidElement(child)) func(child, index++);
   });
 }
 },{"react":"../node_modules/react/index.js"}],"../node_modules/react-bootstrap/esm/Carousel.js":[function(require,module,exports) {
@@ -34363,12 +34363,16 @@ function CarouselFunc(uncontrolledProps, ref) {
       setDirection = _useState[1];
 
   var _useState2 = (0, _react.useState)(false),
-      isSliding = _useState2[0],
-      setIsSliding = _useState2[1];
+      paused = _useState2[0],
+      setPaused = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(activeIndex || 0),
-      renderedActiveIndex = _useState3[0],
-      setRenderedActiveIndex = _useState3[1];
+  var _useState3 = (0, _react.useState)(false),
+      isSliding = _useState3[0],
+      setIsSliding = _useState3[1];
+
+  var _useState4 = (0, _react.useState)(activeIndex || 0),
+      renderedActiveIndex = _useState4[0],
+      setRenderedActiveIndex = _useState4[1];
 
   if (!isSliding && activeIndex !== renderedActiveIndex) {
     if (nextDirectionRef.current) {
@@ -34510,14 +34514,9 @@ function CarouselFunc(uncontrolledProps, ref) {
       onKeyDown(event);
     }
   }, [keyboard, onKeyDown, prev, next]);
-
-  var _useState4 = (0, _react.useState)(false),
-      pausedOnHover = _useState4[0],
-      setPausedOnHover = _useState4[1];
-
   var handleMouseOver = (0, _react.useCallback)(function (event) {
     if (pause === 'hover') {
-      setPausedOnHover(true);
+      setPaused(true);
     }
 
     if (onMouseOver) {
@@ -34525,7 +34524,7 @@ function CarouselFunc(uncontrolledProps, ref) {
     }
   }, [pause, onMouseOver]);
   var handleMouseOut = (0, _react.useCallback)(function (event) {
-    setPausedOnHover(false);
+    setPaused(false);
 
     if (onMouseOut) {
       onMouseOut(event);
@@ -34533,24 +34532,19 @@ function CarouselFunc(uncontrolledProps, ref) {
   }, [onMouseOut]);
   var touchStartXRef = (0, _react.useRef)(0);
   var touchDeltaXRef = (0, _react.useRef)(0);
-
-  var _useState5 = (0, _react.useState)(false),
-      pausedOnTouch = _useState5[0],
-      setPausedOnTouch = _useState5[1];
-
   var touchUnpauseTimeout = (0, _useTimeout.default)();
   var handleTouchStart = (0, _react.useCallback)(function (event) {
     touchStartXRef.current = event.touches[0].clientX;
     touchDeltaXRef.current = 0;
 
-    if (touch) {
-      setPausedOnTouch(true);
+    if (pause === 'hover') {
+      setPaused(true);
     }
 
     if (onTouchStart) {
       onTouchStart(event);
     }
-  }, [touch, onTouchStart]);
+  }, [pause, onTouchStart]);
   var handleTouchMove = (0, _react.useCallback)(function (event) {
     if (event.touches && event.touches.length > 1) {
       touchDeltaXRef.current = 0;
@@ -34566,26 +34560,26 @@ function CarouselFunc(uncontrolledProps, ref) {
     if (touch) {
       var touchDeltaX = touchDeltaXRef.current;
 
-      if (Math.abs(touchDeltaX) <= SWIPE_THRESHOLD) {
-        return;
-      }
-
-      if (touchDeltaX > 0) {
-        prev(event);
-      } else {
-        next(event);
+      if (Math.abs(touchDeltaX) > SWIPE_THRESHOLD) {
+        if (touchDeltaX > 0) {
+          prev(event);
+        } else {
+          next(event);
+        }
       }
     }
 
-    touchUnpauseTimeout.set(function () {
-      setPausedOnTouch(false);
-    }, interval || undefined);
+    if (pause === 'hover') {
+      touchUnpauseTimeout.set(function () {
+        setPaused(false);
+      }, interval || undefined);
+    }
 
     if (onTouchEnd) {
       onTouchEnd(event);
     }
-  }, [touch, prev, next, touchUnpauseTimeout, interval, onTouchEnd]);
-  var shouldPlay = interval != null && !pausedOnHover && !pausedOnTouch && !isSliding;
+  }, [touch, pause, prev, next, touchUnpauseTimeout, interval, onTouchEnd]);
+  var shouldPlay = interval != null && !paused && !isSliding;
   var intervalHandleRef = (0, _react.useRef)();
   (0, _react.useEffect)(function () {
     var _ref, _activeChildIntervalR;
@@ -34640,10 +34634,10 @@ function CarouselFunc(uncontrolledProps, ref) {
       onEntered: isActive ? handleEntered : undefined,
       addEndListener: _transitionEnd.default
     }, function (status) {
-      return _react.default.cloneElement(child, {
+      return /*#__PURE__*/_react.default.cloneElement(child, {
         className: (0, _classnames.default)(child.props.className, isActive && status !== 'entered' && orderClassName, (status === 'entered' || status === 'exiting') && 'active', (status === 'entering' || status === 'exiting') && directionalClassName)
       });
-    }) : _react.default.cloneElement(child, {
+    }) : /*#__PURE__*/_react.default.cloneElement(child, {
       className: (0, _classnames.default)(child.props.className, isActive && 'active')
     });
   })), controls && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, (wrap || activeIndex !== 0) && /*#__PURE__*/_react.default.createElement(_SafeAnchor.default, {
@@ -34659,7 +34653,7 @@ function CarouselFunc(uncontrolledProps, ref) {
   }, nextLabel))));
 }
 
-var Carousel = _react.default.forwardRef(CarouselFunc);
+var Carousel = /*#__PURE__*/_react.default.forwardRef(CarouselFunc);
 
 Carousel.displayName = 'Carousel';
 Carousel.propTypes = propTypes;
@@ -34690,7 +34684,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var DEVICE_SIZES = ['xl', 'lg', 'md', 'sm', 'xs'];
 
-var Col = _react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+var Col = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
 function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
@@ -38586,7 +38580,7 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // TODO: check this
-var NavContext = _react.default.createContext(null);
+var NavContext = /*#__PURE__*/_react.default.createContext(null);
 
 NavContext.displayName = 'NavContext';
 var _default = NavContext;
@@ -38628,7 +38622,7 @@ var defaultProps = {
   disabled: false
 };
 
-var DropdownItem = _react.default.forwardRef(function (_ref, ref) {
+var DropdownItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       children = _ref.children,
@@ -38740,7 +38734,7 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // TODO: check
-var context = _react.default.createContext(null);
+var context = /*#__PURE__*/_react.default.createContext(null);
 
 context.displayName = 'NavbarContext';
 var _default = context;
@@ -38948,7 +38942,7 @@ var defaultProps = {
   flip: true
 }; // TODO: remove this hack
 
-var DropdownMenu = _react.default.forwardRef(function (_ref, ref) {
+var DropdownMenu = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       align = _ref.align,
@@ -39015,14 +39009,17 @@ var DropdownMenu = _react.default.forwardRef(function (_ref, ref) {
     menuProps.alignRight = alignEnd;
   }
 
+  var style = props.style;
+
   if (placement) {
     // we don't need the default popper style,
     // menus are display: none when not shown.
-    props.style = (0, _extends2.default)({}, props.style, {}, menuProps.style);
+    style = (0, _extends2.default)({}, props.style, menuProps.style);
     props['x-placement'] = placement;
   }
 
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, menuProps, {
+    style: style,
     className: _classnames.default.apply(void 0, [className, prefix, show && 'show', alignEnd && prefix + "-right"].concat(alignClasses))
   }));
 });
@@ -39085,7 +39082,7 @@ var _useWrappedRefWithWarning = _interopRequireDefault(require("./useWrappedRefW
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var DropdownToggle = _react.default.forwardRef(function (_ref, ref) {
+var DropdownToggle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       split = _ref.split,
       className = _ref.className,
@@ -39172,7 +39169,7 @@ var defaultProps = {
   navbar: false
 };
 
-var Dropdown = _react.default.forwardRef(function (pProps, ref) {
+var Dropdown = /*#__PURE__*/_react.default.forwardRef(function (pProps, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(pProps, {
     show: 'onToggle'
   }),
@@ -39318,14 +39315,15 @@ var propTypes = {
 };
 /**
  * A convenience component for simple or general use dropdowns. Renders a `Button` toggle and all `children`
- * are passed directly to the default `Dropdown.Menu`.
+ * are passed directly to the default `Dropdown.Menu`. This component accepts all of
+ * [`Dropdown`'s props](#dropdown-props).
  *
  * _All unknown props are passed through to the `Dropdown` component._ Only
  * the Button `variant`, `size` and `bsPrefix` props are passed to the toggle,
- * along with menu related props are passed to the `Dropdown.Menu`
+ * along with menu-related props are passed to the `Dropdown.Menu`
  */
 
-var DropdownButton = _react.default.forwardRef(function (_ref, ref) {
+var DropdownButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var title = _ref.title,
       children = _ref.children,
       bsPrefix = _ref.bsPrefix,
@@ -39480,7 +39478,7 @@ var propTypes = {
   as: _propTypes.default.elementType
 };
 
-var Feedback = _react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+var Feedback = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
 function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
@@ -39513,7 +39511,7 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // TODO
-var FormContext = _react.default.createContext({
+var FormContext = /*#__PURE__*/_react.default.createContext({
   controlId: undefined
 });
 
@@ -39545,7 +39543,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormCheckInput = _react.default.forwardRef(function (_ref, ref) {
+var FormCheckInput = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       bsPrefix = _ref.bsPrefix,
       bsCustomPrefix = _ref.bsCustomPrefix,
@@ -39607,7 +39605,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormCheckLabel = _react.default.forwardRef(function (_ref, ref) {
+var FormCheckLabel = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       bsCustomPrefix = _ref.bsCustomPrefix,
       className = _ref.className,
@@ -39667,7 +39665,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormCheck = _react.default.forwardRef(function (_ref, ref) {
+var FormCheck = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       bsPrefix = _ref.bsPrefix,
       bsCustomPrefix = _ref.bsCustomPrefix,
@@ -39767,7 +39765,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormFileInput = _react.default.forwardRef(function (_ref, ref) {
+var FormFileInput = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       bsPrefix = _ref.bsPrefix,
       bsCustomPrefix = _ref.bsCustomPrefix,
@@ -39828,7 +39826,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormFileLabel = _react.default.forwardRef(function (_ref, ref) {
+var FormFileLabel = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       bsCustomPrefix = _ref.bsCustomPrefix,
       className = _ref.className,
@@ -39889,7 +39887,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormFile = _react.default.forwardRef(function (_ref, ref) {
+var FormFile = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       bsPrefix = _ref.bsPrefix,
       bsCustomPrefix = _ref.bsCustomPrefix,
@@ -39992,7 +39990,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormControl = _react.default.forwardRef(function (_ref, ref) {
+var FormControl = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       bsCustomPrefix = _ref.bsCustomPrefix,
       type = _ref.type,
@@ -40087,7 +40085,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormGroup = _react.default.forwardRef(function (_ref, ref) {
+var FormGroup = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       children = _ref.children,
@@ -40147,7 +40145,7 @@ var defaultProps = {
   srOnly: false
 };
 
-var FormLabel = _react.default.forwardRef(function (_ref, ref) {
+var FormLabel = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'label' : _ref$as,
       bsPrefix = _ref.bsPrefix,
@@ -40206,7 +40204,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormText = _react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+var FormText = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
 function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
@@ -40240,7 +40238,7 @@ var _FormCheck = _interopRequireDefault(require("./FormCheck"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Switch = _react.default.forwardRef(function (props, ref) {
+var Switch = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   return /*#__PURE__*/_react.default.createElement(_FormCheck.default, (0, _extends2.default)({}, props, {
     ref: ref,
     type: "switch"
@@ -40293,7 +40291,7 @@ var defaultProps = {
   inline: false
 };
 
-var FormImpl = _react.default.forwardRef(function (_ref, ref) {
+var FormImpl = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       inline = _ref.inline,
       className = _ref.className,
@@ -40344,7 +40342,7 @@ var defaultProps = {
   fluid: false
 };
 
-var Container = _react.default.forwardRef(function (_ref, ref) {
+var Container = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       fluid = _ref.fluid,
       _ref$as = _ref.as,
@@ -40420,7 +40418,7 @@ var defaultProps = {
   thumbnail: false
 };
 
-var Image = _react.default.forwardRef(function (_ref, ref) {
+var Image = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       fluid = _ref.fluid,
@@ -40470,7 +40468,7 @@ var defaultProps = {
   fluid: true
 };
 
-var FigureImage = _react.default.forwardRef(function (_ref, ref) {
+var FigureImage = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var className = _ref.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["className"]);
   return /*#__PURE__*/_react.default.createElement(_Image.default, (0, _extends2.default)({
@@ -40574,7 +40572,7 @@ var InputGroupRadio = function InputGroupRadio(props) {
  */
 
 
-var InputGroup = _react.default.forwardRef(function (_ref, ref) {
+var InputGroup = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       size = _ref.size,
       className = _ref.className,
@@ -40623,7 +40621,7 @@ var defaultProps = {
   fluid: false
 };
 
-var Jumbotron = _react.default.forwardRef(function (_ref, ref) {
+var Jumbotron = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _classes;
 
   var _ref$as = _ref.as,
@@ -40657,7 +40655,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var TabContext = _react.default.createContext(null);
+var TabContext = /*#__PURE__*/_react.default.createContext(null);
 
 var _default = TabContext;
 exports.default = _default;
@@ -40696,7 +40694,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 var noop = function noop() {};
 
-var AbstractNav = _react.default.forwardRef(function (_ref, ref) {
+var AbstractNav = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'ul' : _ref$as,
       onSelect = _ref.onSelect,
@@ -40829,7 +40827,7 @@ var defaultProps = {
   disabled: false
 };
 
-var AbstractNavItem = _react.default.forwardRef(function (_ref, ref) {
+var AbstractNavItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var active = _ref.active,
       className = _ref.className,
       eventKey = _ref.eventKey,
@@ -40855,7 +40853,11 @@ var AbstractNavItem = _react.default.forwardRef(function (_ref, ref) {
   }
 
   if (props.role === 'tab') {
-    props.tabIndex = isActive ? props.tabIndex : -1;
+    if (props.disabled) {
+      props.tabIndex = -1;
+      props['aria-disabled'] = true;
+    }
+
     props['aria-selected'] = isActive;
   }
 
@@ -40909,7 +40911,7 @@ var defaultProps = {
   disabled: false
 };
 
-var ListGroupItem = _react.default.forwardRef(function (_ref, ref) {
+var ListGroupItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       active = _ref.active,
       disabled = _ref.disabled,
@@ -40930,6 +40932,12 @@ var ListGroupItem = _react.default.forwardRef(function (_ref, ref) {
 
     if (onClick) onClick(event);
   }, [disabled, onClick]);
+
+  if (disabled && props.tabIndex === undefined) {
+    props.tabIndex = -1;
+    props['aria-disabled'] = true;
+  }
+
   return /*#__PURE__*/_react.default.createElement(_AbstractNavItem.default, (0, _extends2.default)({
     ref: ref
   }, props, {
@@ -40979,7 +40987,7 @@ var defaultProps = {
   horizontal: undefined
 };
 
-var ListGroup = _react.default.forwardRef(function (props, ref) {
+var ListGroup = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(props, {
     activeKey: 'onSelect'
   }),
@@ -41038,7 +41046,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var MediaBody = (0, _createWithBsPrefix.default)('media-body');
 
-var Media = _react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+var Media = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
 function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
@@ -42083,7 +42091,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ModalContext = _react.default.createContext({
+var ModalContext = /*#__PURE__*/_react.default.createContext({
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   onHide: function onHide() {}
 });
@@ -42110,7 +42118,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ModalDialog = _react.default.forwardRef(function (_ref, ref) {
+var ModalDialog = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       contentClassName = _ref.contentClassName,
@@ -42182,7 +42190,7 @@ var defaultProps = {
   closeButton: false
 };
 
-var ModalHeader = _react.default.forwardRef(function (_ref, ref) {
+var ModalHeader = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       closeLabel = _ref.closeLabel,
       closeButton = _ref.closeButton,
@@ -42316,7 +42324,7 @@ function BackdropTransition(props) {
 /* eslint-enable no-use-before-define */
 
 
-var Modal = _react.default.forwardRef(function (_ref, ref) {
+var Modal = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       style = _ref.style,
@@ -42515,7 +42523,7 @@ var Modal = _react.default.forwardRef(function (_ref, ref) {
       className: (0, _classnames.default)(bsPrefix + "-backdrop", backdropClassName, !animation && 'show')
     }));
   }, [animation, backdropClassName, bsPrefix]);
-  var baseModalStyle = (0, _extends2.default)({}, style, {}, modalStyle); // Sets `display` always block when `animation` is false
+  var baseModalStyle = (0, _extends2.default)({}, style, modalStyle); // Sets `display` always block when `animation` is false
 
   if (!animation) {
     baseModalStyle.display = 'block';
@@ -42531,7 +42539,6 @@ var Modal = _react.default.forwardRef(function (_ref, ref) {
       onMouseUp: handleMouseUp,
       "aria-labelledby": ariaLabelledby
     }), /*#__PURE__*/_react.default.createElement(Dialog, (0, _extends2.default)({}, props, {
-      role: "document",
       onMouseDown: handleDialogMouseDown,
       className: dialogClassName,
       contentClassName: contentClassName
@@ -42600,7 +42607,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var NavItem = _react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+var NavItem = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
 function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
@@ -42647,7 +42654,7 @@ var defaultProps = {
   as: _SafeAnchor.default
 };
 
-var NavLink = _react.default.forwardRef(function (_ref, ref) {
+var NavLink = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       disabled = _ref.disabled,
       className = _ref.className,
@@ -42715,7 +42722,7 @@ var defaultProps = {
   fill: false
 };
 
-var Nav = _react.default.forwardRef(function (uncontrolledProps, ref) {
+var Nav = /*#__PURE__*/_react.default.forwardRef(function (uncontrolledProps, ref) {
   var _classNames;
 
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(uncontrolledProps, {
@@ -42781,7 +42788,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var NavbarBrand = _react.default.forwardRef(function (_ref, ref) {
+var NavbarBrand = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       as = _ref.as,
@@ -42819,7 +42826,7 @@ var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var NavbarCollapse = _react.default.forwardRef(function (_ref, ref) {
+var NavbarCollapse = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var children = _ref.children,
       bsPrefix = _ref.bsPrefix,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["children", "bsPrefix"]);
@@ -42869,7 +42876,7 @@ var defaultProps = {
   label: 'Toggle navigation'
 };
 
-var NavbarToggle = _react.default.forwardRef(function (_ref, ref) {
+var NavbarToggle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       children = _ref.children,
@@ -42954,7 +42961,7 @@ var defaultProps = {
   collapseOnSelect: false
 };
 
-var Navbar = _react.default.forwardRef(function (props, ref) {
+var Navbar = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(props, {
     expanded: 'onToggle'
   }),
@@ -43082,7 +43089,7 @@ var propTypes = {
   bsPrefix: _propTypes.default.string
 };
 
-var NavDropdown = _react.default.forwardRef(function (_ref, ref) {
+var NavDropdown = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       title = _ref.title,
       children = _ref.children,
@@ -43485,18 +43492,18 @@ function Overlay(_ref) {
       placement: placement,
       outOfBoundaries: (state == null ? void 0 : (_state$modifiersData$ = state.modifiersData.hide) == null ? void 0 : _state$modifiersData$.isReferenceHidden) || false
     });
-    if (typeof overlay === 'function') return overlay((0, _extends2.default)({}, props, {}, overlayProps, {
+    if (typeof overlay === 'function') return overlay((0, _extends2.default)({}, props, overlayProps, {
       placement: placement,
       show: show,
       popper: popper,
       arrowProps: arrowProps
     }));
-    return _react.default.cloneElement(overlay, (0, _extends2.default)({}, props, {}, overlayProps, {
+    return /*#__PURE__*/_react.default.cloneElement(overlay, (0, _extends2.default)({}, props, overlayProps, {
       placement: placement,
       arrowProps: arrowProps,
       popper: popper,
       className: (0, _classnames.default)(overlay.props.className, !transition && show && 'show'),
-      style: (0, _extends2.default)({}, overlay.props.style, {}, overlayProps.style)
+      style: (0, _extends2.default)({}, overlay.props.style, overlayProps.style)
     }));
   });
 }
@@ -43697,7 +43704,7 @@ function OverlayTrigger(_ref) {
     ref: triggerNodeRef
   })) : /*#__PURE__*/_react.default.createElement(RefHolder, {
     ref: triggerNodeRef
-  }, (0, _react.cloneElement)(children, triggerProps)), /*#__PURE__*/_react.default.createElement(_Overlay.default, (0, _extends2.default)({}, props, {
+  }, /*#__PURE__*/(0, _react.cloneElement)(children, triggerProps)), /*#__PURE__*/_react.default.createElement(_Overlay.default, (0, _extends2.default)({}, props, {
     show: show,
     onHide: handleHide,
     flip: flip,
@@ -43737,7 +43744,7 @@ var defaultProps = {
   activeLabel: '(current)'
 };
 
-var PageItem = _react.default.forwardRef(function (_ref, ref) {
+var PageItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var active = _ref.active,
       disabled = _ref.disabled,
       className = _ref.className,
@@ -43829,7 +43836,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @property {PageItem} Next
  * @property {PageItem} Last
  */
-var Pagination = _react.default.forwardRef(function (_ref, ref) {
+var Pagination = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       children = _ref.children,
@@ -43871,7 +43878,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PopoverTitle = _react.default.forwardRef(function (_ref, ref) {
+var PopoverTitle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       bsPrefix = _ref.bsPrefix,
@@ -43908,7 +43915,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PopoverContent = _react.default.forwardRef(function (_ref, ref) {
+var PopoverContent = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       bsPrefix = _ref.bsPrefix,
@@ -43955,7 +43962,7 @@ var defaultProps = {
   placement: 'right'
 };
 
-var Popover = _react.default.forwardRef(function (_ref, ref) {
+var Popover = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       placement = _ref.placement,
       className = _ref.className,
@@ -44043,7 +44050,7 @@ function onlyProgressBar(props, propName, componentName) {
 
     if (child.type === element.type) return;
     var childType = child.type;
-    var childIdentifier = _react.default.isValidElement(child) ? childType.displayName || childType.name || childType : child;
+    var childIdentifier = /*#__PURE__*/_react.default.isValidElement(child) ? childType.displayName || childType.name || childType : child;
     error = new Error("Children of " + componentName + " can contain only ProgressBar " + ("components. Found " + childIdentifier + "."));
   });
 
@@ -44095,7 +44102,7 @@ function renderProgressBar(_ref, ref) {
   }, label) : label);
 }
 
-var ProgressBar = _react.default.forwardRef(function (_ref2, ref) {
+var ProgressBar = /*#__PURE__*/_react.default.forwardRef(function (_ref2, ref) {
   var isChild = _ref2.isChild,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, ["isChild"]);
   props.bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(props.bsPrefix, 'progress');
@@ -44121,7 +44128,7 @@ var ProgressBar = _react.default.forwardRef(function (_ref2, ref) {
   }, wrapperProps, {
     className: (0, _classnames.default)(className, bsPrefix)
   }), children ? (0, _ElementChildren.map)(children, function (child) {
-    return (0, _react.cloneElement)(child, {
+    return /*#__PURE__*/(0, _react.cloneElement)(child, {
       isChild: true
     });
   }) : renderProgressBar({
@@ -44165,7 +44172,7 @@ var defaultProps = {
   aspectRatio: '1by1'
 };
 
-var ResponsiveEmbed = _react.default.forwardRef(function (_ref, ref) {
+var ResponsiveEmbed = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       children = _ref.children,
@@ -44179,7 +44186,7 @@ var ResponsiveEmbed = _react.default.forwardRef(function (_ref, ref) {
     ref: ref
   }, props, {
     className: (0, _classnames.default)(decoratedBsPrefix, className, aspectRatio && decoratedBsPrefix + "-" + aspectRatio)
-  }), _react.default.cloneElement(child, {
+  }), /*#__PURE__*/_react.default.cloneElement(child, {
     className: (0, _classnames.default)(child.props.className, decoratedBsPrefix + "-item")
   }));
 });
@@ -44212,7 +44219,7 @@ var defaultProps = {
   noGutters: false
 };
 
-var Row = _react.default.forwardRef(function (_ref, ref) {
+var Row = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       noGutters = _ref.noGutters,
@@ -44267,7 +44274,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Spinner = _react.default.forwardRef(function (_ref, ref) {
+var Spinner = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       variant = _ref.variant,
       animation = _ref.animation,
@@ -44381,8 +44388,18 @@ var defaultProps = {
   toggleLabel: 'Toggle dropdown',
   type: 'button'
 };
+/**
+ * A convenience component for simple or general use split button dropdowns. Renders a
+ * `ButtonGroup` containing a `Button` and a `Button` toggle for the `Dropdown`. All `children`
+ * are passed directly to the default `Dropdown.Menu`. This component accepts all of [`Dropdown`'s
+ * props](#dropdown-props).
+ *
+ * _All unknown props are passed through to the `Dropdown` component._
+ * The Button `variant`, `size` and `bsPrefix` props are passed to the button and toggle,
+ * and menu-related props are passed to the `Dropdown.Menu`
+ */
 
-var SplitButton = _react.default.forwardRef(function (_ref, ref) {
+var SplitButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       bsPrefix = _ref.bsPrefix,
       size = _ref.size,
@@ -44518,7 +44535,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var TabContent = _react.default.forwardRef(function (_ref, ref) {
+var TabContent = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
@@ -44583,7 +44600,7 @@ function useTabContext(props) {
   });
 }
 
-var TabPane = _react.default.forwardRef(function (props, ref) {
+var TabPane = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   var _useTabContext = useTabContext(props),
       bsPrefix = _useTabContext.bsPrefix,
       className = _useTabContext.className,
@@ -44700,7 +44717,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Table = _react.default.forwardRef(function (_ref, ref) {
+var Table = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       striped = _ref.striped,
@@ -44857,7 +44874,7 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // TODO: check
-var ToastContext = _react.default.createContext({
+var ToastContext = /*#__PURE__*/_react.default.createContext({
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   onClose: function onClose() {}
 });
@@ -44899,7 +44916,7 @@ var defaultProps = {
   closeButton: true
 };
 
-var ToastHeader = _react.default.forwardRef(function (_ref, ref) {
+var ToastHeader = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       closeLabel = _ref.closeLabel,
       closeButton = _ref.closeButton,
@@ -44978,7 +44995,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Toast = _react.default.forwardRef(function (_ref, ref) {
+var Toast = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       children = _ref.children,
@@ -45073,7 +45090,7 @@ var noop = function noop() {
   return undefined;
 };
 
-var ToggleButton = _react.default.forwardRef(function (_ref, ref) {
+var ToggleButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var children = _ref.children,
       name = _ref.name,
       className = _ref.className,
@@ -45151,7 +45168,7 @@ var defaultProps = {
   vertical: false
 };
 
-var ToggleButtonGroup = _react.default.forwardRef(function (props, ref) {
+var ToggleButtonGroup = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(props, {
     value: 'onChange'
   }),
@@ -45202,7 +45219,7 @@ var ToggleButtonGroup = _react.default.forwardRef(function (props, ref) {
       return handleToggle(childVal, e);
     };
 
-    return _react.default.cloneElement(child, {
+    return /*#__PURE__*/_react.default.cloneElement(child, {
       type: type,
       name: child.name || name,
       checked: values.indexOf(childVal) !== -1,
@@ -45241,7 +45258,7 @@ var defaultProps = {
   placement: 'right'
 };
 
-var Tooltip = _react.default.forwardRef(function (_ref, ref) {
+var Tooltip = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       placement = _ref.placement,
       className = _ref.className,
@@ -55046,7 +55063,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63590" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49616" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
