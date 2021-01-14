@@ -109,3 +109,13 @@ export function ProfileUpdateView(props) {
     </Form>
   )
 };
+
+
+ProfileUpdateView.propTypes = {
+  user: PropTypes.shape({
+    Username: PropTypes.string.isRequired,
+    Password: PropTypes.string.isRequired,
+    Email: PropTypes.string.isRequired,
+    Birthdate: PropTypes.instanceOf(Date).isRequired
+  })
+}

@@ -106,5 +106,15 @@ export function RegistrationView(props) {
       </Form.Group>
       <Button type="button" className="button" onClick={handleRegister}>Register</Button>
     </Form>
-  )
-};
+  );
+}
+
+RegistrationView.propTypes = {
+  user: PropTypes.shape({
+    Username: PropTypes.string.isRequired,
+    Password: PropTypes.string.isRequired,
+    Email: PropTypes.string.isRequired,
+    Birthdate: PropTypes.instanceOf(Date).isRequired
+  })
+}
+

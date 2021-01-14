@@ -104,26 +104,35 @@ export class ProfileView extends React.Component {
           </Card.Body>
         </Card>
         <h2 className="title">My Favorite Movies</h2>
-        {FavoriteMoviesList.map((movie) => {
-          return (
-            <Container>
-              <Row className="justify-content-md-center">
-                <Col lg="3">
-                  <Card key={movie._id} className="movie-card" style={{ width: '16rem' }}>
-                    <Card.Img variant="top" src={movie.ImagePath} />
-                    <Card.Body>
-                      <Link to={`/movies/${movie._id}`}>
-                        <Button className='button'>Movie Info</Button>
-                      </Link>
-                      <Button variant="link" className="button-link" onClick={() => this.removeFavoriteMovie(movie)}>Remove From Favorites</Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-            </Container>
-          );
-        })}
-      </Container>
+        <Row className="justify-content-md-center">
+          {FavoriteMoviesList.map((movie) => {
+            return (
+              <Col md="3">
+                <Card key={movie._id} className="movie-card" style={{ width: '16rem' }}>
+                  <Card.Img variant="top" src={movie.ImagePath} />
+                  <Card.Body>
+                    <Link to={`/movies/${movie._id}`}>
+                      <Button className='button'>Movie Info</Button>
+                    </Link>
+                    <Button variant="link" className="button-link" onClick={() => this.removeFavoriteMovie(movie)}>Remove From Favorites</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })
+          }
+        </Row>
+      </Container >
     );
   }
+}
+
+ProfileView.propTypes = {
+  user: PropTypes.shape({
+    Username: PropTypes.string.isRequired,
+    Password: PropTypes.string.isRequired,
+    Email: PropTypes.string.isRequired,
+    Birthdate: PropTypes.instanceOf(Date).isRequired,
+    FavoriteMovies: PropTypes.array
+  })
 }

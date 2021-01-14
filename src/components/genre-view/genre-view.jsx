@@ -35,9 +35,9 @@ export class GenreView extends React.Component {
   }
 }
 
-// GenreView.propTypes = {
-//   genre: PropTypes.shape({
-//     Name: PropTypes.string.isRequired,
-//     Description: PropTypes.string.isRequired
-//   }).isRequired,
-// };
+GenreView.propTypes = {
+  genre: PropTypes.shape({
+    Name: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired
+  }).isRequired,
+};

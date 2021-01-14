@@ -17,7 +17,6 @@ export class DirectorView extends React.Component {
     const { director } = this.props;
 
     if (!director) return <div className="main-view" />;
-    console.log(director.Bio);
 
     return (
       <div className="director-view">
@@ -37,10 +36,11 @@ export class DirectorView extends React.Component {
 }
 
 
-// DirectorView.propTypes = {
-//   director: PropTypes.shape({
-//     Name: PropTypes.string.isRequired,
-//     Bio: PropTypes.string.isRequired
-//   }).isRequired,
-//   onClick: PropTypes.func.isRequired
-// };
+DirectorView.propTypes = {
+  director: PropTypes.shape({
+    Name: PropTypes.string.isRequired,
+    Bio: PropTypes.string.isRequired,
+    Birth: PropTypes.string.isRequired,
+    Death: PropTypes.string
+  }).isRequired,
+};

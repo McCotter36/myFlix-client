@@ -12,6 +12,28 @@
 .nav-link {
   color: white !important;
 }
+.visibility-input {
+  text-align: center;
+  font-family: "Goldman";
+}
+.title {
+  font-family: "Goldman", cursive;
+  font-size: 24px;
+  text-align: center;
+}
+
+.description {
+  font-family: "Roboto";
+}
+
+.button {
+  font-family: "Goldman", cursive;
+  background-color: #3d003d;
+  border-color: white;
+}
+.movie-card-center {
+  align-items: center;
+}
 .login-form {
   margin-left: auto;
   margin-right: auto;
@@ -30,21 +52,6 @@
   font-family: "Goldman", cursive;
   color: #3d003d;
   text-align: center;
-}
-.title {
-  font-family: "Goldman", cursive;
-  font-size: 24px;
-  text-align: center;
-}
-
-.description {
-  font-family: "Roboto";
-}
-
-.button {
-  font-family: "Goldman", cursive;
-  background-color: #3d003d;
-  border-color: white;
 }
 .movie-view {
   margin-left: auto;
