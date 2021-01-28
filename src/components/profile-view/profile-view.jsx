@@ -107,8 +107,8 @@ export class ProfileView extends React.Component {
         <Row className="justify-content-md-center">
           {FavoriteMoviesList.map((movie) => {
             return (
-              <Col md="3">
-                <Card key={movie._id} className="movie-card" style={{ width: '16rem' }}>
+              <Col key={movie._id} md="3">
+                <Card className="movie-card" style={{ width: '16rem' }}>
                   <Card.Img variant="top" src={movie.ImagePath} />
                   <Card.Body>
                     <Link to={`/movies/${movie._id}`}>
